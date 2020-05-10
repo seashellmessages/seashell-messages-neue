@@ -33,9 +33,15 @@ $border : 0.1em solid black;
 }
 
 @mixin transition ( $length ) {
-
   transition: all $length ease;
+}
 
+@mixin fadeInAnimation ( $length: 2s ) {
+  -webkit-animation: fadein $length; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein $length; /* Firefox < 16 */
+  -ms-animation: fadein $length; /* Internet Explorer */
+  -o-animation: fadein $length; /* Opera < 12.1 */
+  animation: fadein $length;
 }
 
 @keyframes fadein {
@@ -251,98 +257,12 @@ nav {
    width: 100%;
 }
 
-.about-picture-container {
-   img {
-     width: 100%;
-   }
-}
-
 .about-text-container {
+  @include fadeInAnimation();
   padding: 2.5vh;
   p {
     text-align: center;
     font-size: 2.8vmin;
-  }
-}
-
-.services-section {
-  background-color: $white;
-}
-
-.services-content-container {
-  @include vertical-align();
-}
-
-.services-text-container {
-  text-align: center;
-  p {
-    font-size: 2.7vh;
-  }
-}
-
-.service-container {
-
-}
-
-.services-icons-container {
-  text-align: center;
-  font-size: 3vh;
-  i {
-    padding: 0.5em;
-  }
-}
-
-.expertise-section {
-  background: $light_pastel_green_75;
-}
-
-.expertise-content-container {
-
-   @include vertical-align(relative, 60%);
-   width: 100%;
-}
-
-.expertise-picture-container {
-   img {
-     width: 100%;
-   }
-}
-
-.expertise-text-container {
-  p {
-    font-size: 2.7vh;
-  }
-}
-
-.contact-section {
-
-  color: $white;
-  background: $blue_gray;
-  opacity: 0.9;
-
-}
-
-.contact-description {
-  text-align: center;
-  p {
-    margin: 5em;
-    font-size: 3vh;
-  }
-}
-
-.contact-form-wrapper {
-
-  width: 100%;
-  height: auto;
-}
-
-.contact-submit {
-  color: $white !important;
-  transition: all 0.2s ease;
-
-  &:hover {
-    transition: all 0.2s ease;
-    color: gray !important;
   }
 }
 
@@ -378,11 +298,7 @@ footer {
 }
 
 .splash-text-container {
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
+  @include fadeInAnimation();
   @include vertical-align(relative, 60%);
   text-align: center;
 
