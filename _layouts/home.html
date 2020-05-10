@@ -1,3 +1,12 @@
 {% include header.html %}
 
-{{page.title}}
+<main id="main-content" class="main-content">
+    <section id="home" class="page-section home-section">
+        <div id="welcome-text" class="container splash-text-container row">
+            <h1>
+                {{page.content}}
+            </h1>
+        </div>
+    </section>
+    {% include footer.html %}
+</main>
