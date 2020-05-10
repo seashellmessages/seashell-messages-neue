@@ -3,4 +3,5 @@ title: Seashell Messages
 layout: home
 ---
 
-Hello world
+Medical and scientific communication services:
+created, translated, edited, improved.
