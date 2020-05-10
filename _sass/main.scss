@@ -225,8 +225,9 @@ select {
 
 footer {
   box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.2);
-  height: 20vh;
-  background-color: $seashell_black;
+  height: 30vh;
+  padding: 5vh;
+  background-color: black;
   color: $white;
 }
 
@@ -234,11 +235,20 @@ footer {
   @include vertical-align();
 }
 
+@mixin footer-container() {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .footer-left-container {
+  @include footer-container();
   text-align: left;
 }
 
 .footer-right-container {
+  @include footer-container();
   text-align: right;
 }
 
@@ -249,15 +259,6 @@ footer {
 .splash-text-container {
   @include fadeInAnimation();
   text-align: center;
-
-  h1 {
-    font-size: 5vh;
-  }
-
-  p {
-    font-size: 5vh;
-  }
-
 }
 
 .contact-form-wrapper {
