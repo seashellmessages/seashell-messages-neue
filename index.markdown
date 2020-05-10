@@ -1,5 +1,5 @@
 ---
-title: Seashell Messages
+title: Home
 layout: home
 ---
 
