@@ -1,14 +1,12 @@
 {% include header.html %}
 
 <main id="main-content" class="main-content">
-    <section id="about" class="page-section about-section">
-        <div id="about-content" class="about-content-container row">
-            <div class="about-text-container eight columns offset-by-two">
-                <p>
-                    {{page.content}}
-                </p>
-            </div>
+    <div id="about-content" class="about-content-container row">
+        <div class="about-text-container eight columns offset-by-two">
+            <p>
+                {{page.content}}
+            </p>
         </div>
-    </section>
-    {% include footer.html %}
+    </div>
 </main>
+{% include footer.html %}

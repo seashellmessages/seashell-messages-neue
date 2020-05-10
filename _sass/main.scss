@@ -73,6 +73,12 @@ $border : 0.1em solid black;
   to   { opacity: 1; }
 }
 
+@mixin borderBox {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -80,9 +86,6 @@ $border : 0.1em solid black;
 }
 
 html {
-
-  box-sizing: border-box;
-
 }
 
 body {
@@ -92,47 +95,15 @@ body {
 .mobile-nav-button {
   z-index: 1000;
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   overflow: hidden;
-  background-color: $seashell_black;
-  border-radius: 100%;
   margin: 1.5em;
   padding: 1.5em;
-
+  cursor: pointer;
   i {
-    color: $white;
-    position: relative;
-  }
-
-  &:hover {
-    color: gray;
-    cursor: pointer;
-    cursor: hand;
-  }
-
-}
-
-.mobile-nav-menu {
-  position: fixed;
-  top: 0;
-  left: -75%;
-  background-color: $white;
-  width: 75%;
-  height: 100%;
-  z-index: 2000;
-
-  ul {
-    list-style-type: none;
-    li {
-      padding: 2vh;
-      border-bottom: $black dashed 1px;
-      a {
-        color: $seashell_black;
-        text-decoration: none;
-      }
-    }
+    font-size: 2em;
   }
 }
 
@@ -173,7 +144,6 @@ header {
 }
 
 nav {
-
   width: 100%;
   height: 100%;
   max-height: 100%;
@@ -185,23 +155,17 @@ nav {
     @include vertical-align();
     list-style-type: none;
   }
-
   li {
-
     display: inline;
-
     a {
       color: $black;
       text-decoration: none;
       padding: 2vw;
     }
-
     a:hover{
       color: $blue_gray;
     }
-
   }
-
 }
 .site-branding {
   height: 6em;
@@ -222,27 +186,27 @@ nav {
   }
 }
 
-.page-section {
-  height: 100vh;
-  font-size: 2em;
+.main-content {
+  @include borderBox();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 12em;
+  min-height: 100vh;
 }
+
 
 .home-section {
 }
 
 #welcome-text {
-  font-size: 1em;
+  font-size: 3em;
 }
 
 .about-section {
 }
 
-.wisdom-section {
-  background-color: $light_gray_75;
-}
-
 .about-content-container {
-   @include vertical-align(relative, 60%);
    width: 100%;
 }
 
@@ -251,7 +215,7 @@ nav {
   padding: 2.5vh;
   p {
     text-align: center;
-    font-size: 2.8vmin;
+    font-size: 2em;
   }
 }
 
@@ -261,7 +225,7 @@ select {
 
 footer {
   box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.2);
-  height: 30vh;
+  height: 20vh;
   background-color: $seashell_black;
   color: $white;
 }
@@ -271,15 +235,11 @@ footer {
 }
 
 .footer-left-container {
-
-
-
+  text-align: left;
 }
 
 .footer-right-container {
-
-
-
+  text-align: right;
 }
 
 .social-box {
@@ -288,7 +248,6 @@ footer {
 
 .splash-text-container {
   @include fadeInAnimation();
-  @include vertical-align(relative, 60%);
   text-align: center;
 
   h1 {
@@ -301,22 +260,28 @@ footer {
 
 }
 
-input, textarea {
-  color: $black;
+.contact-form-wrapper {
+  @include fadeInAnimation();
 }
 
-.form-result {
+.form-content-wrapper {
   text-align: center;
 }
 
-.form-result-success {
-  @include vertical-align();
-  font-size: 5vh;
+.submit-button {
+  display: block;
 }
 
-.form-result-error {
-  color: red;
-  font-size: 1em;
+input {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+}
+
+select {
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -325,36 +290,29 @@ input, textarea {
 
 @media only screen and(max-width: 80em) {
 
-  .services-text-container {
-    display: none;
-  }
-  .page-section {
-    padding: 5vh;
+  .contact-form-wrapper {
+    padding: 0 5%;
   }
 
-  .contact-description {
-    display: none;
-  }
-  .contact-form-wrapper {
-    @include vertical-align();
-  }
   .navigation {
     display: none;
+    height: auto;
+    box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.2);
+  }
+
+  nav {
+    ul {
+      @include vertical-align(relative, 0);
+      margin: 2em 0;
+    }
+
+    li {
+      display: block;
+    }
   }
 
   .mobile-nav-button {
     display: block;
-  }
-
-  .mobile-nav-menu {
-    ul {
-      li {
-
-        a {
-          font-size: 2vh;
-        }
-      }
-    }
   }
 
   .site-logo-container {
@@ -363,6 +321,12 @@ input, textarea {
 
   footer {
     padding: 5em;
+  }
+
+  .about-text-container {
+    p {
+      font-size: 1.5em;
+    }
   }
 }
 
