@@ -291,6 +291,14 @@ select {
 
 @media only screen and(max-width: 80em) {
 
+  .footer-left-container {
+    text-align: center;
+  }
+
+  .footer-right-container {
+    text-align: center;
+  }
+
   .contact-form-wrapper {
     padding: 0 5%;
   }
