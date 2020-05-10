@@ -74,12 +74,9 @@ $border : 0.1em solid black;
 }
 
 * {
-
-  font-family: "Arimo", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
-
 }
 
 html {
@@ -89,14 +86,7 @@ html {
 }
 
 body {
-/*
-  box-sizing: inherit;
-  background: no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-*/
+  background-color: rgba(152, 198, 205, 0.1);
 }
 
 .mobile-nav-button {
@@ -167,6 +157,7 @@ header {
 }
 
 .navigation {
+  font-family: "Arimo", Helvetica, sans-serif;
   position: absolute;
   top: 8em;
   background: $white;
@@ -237,7 +228,6 @@ nav {
 }
 
 .home-section {
-  background-color: $light_gray_75;
 }
 
 #welcome-text {
@@ -245,7 +235,6 @@ nav {
 }
 
 .about-section {
-  background-color: $white
 }
 
 .wisdom-section {
