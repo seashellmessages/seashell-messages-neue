@@ -1,0 +1,21 @@
+---
+title: Seashell Messages
+timezone: Europe/Berlin
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: michelle.meredyth@gmail.com
+description: Science!
+baseurl: 
+url: 
+twitter_username: 
+github_username: 
+theme: minima
+plugins:
+- jekyll-feed
+sass:
+  style: compact
