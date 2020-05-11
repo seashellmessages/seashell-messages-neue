@@ -27,6 +27,16 @@ function changeLogoOnMobile() {
     }
 }
 
+function resetFormOnSubmit() {
+    submit_button = $(".submit-button");
+    contact_form = $(".contact-form");
+
+    submit_button.click(function () {
+            contact_form[0].reset();
+        }
+    );
+}
+
 function openMenuMobile() {
     let mobile_nav_button = $(".mobile-nav-button");
     let nav_menu = $(".navigation");
@@ -39,7 +49,8 @@ function openMenuMobile() {
                 nav_menu.slideUp( "slow" );
             }
         }
-    )
+    );
+    resetFormOnSubmit();
 }
 
 $(document).ready(function(){

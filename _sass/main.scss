@@ -253,7 +253,12 @@ footer {
 }
 
 .social-box {
-
+  i {
+    color: white;
+    &:hover {
+      color: $blue_gray;
+    }
+  }
 }
 
 .splash-text-container {

@@ -10,8 +10,8 @@ collections:
     output: true
 email: michelle.meredyth@gmail.com
 description: Science!
-baseurl: 
-url: 
+baseurl:
+url: https://www.seashellmessages.com
 twitter_username: 
 github_username: 
 theme: minima
