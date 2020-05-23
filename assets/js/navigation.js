@@ -32,7 +32,7 @@ function reloadOnSubmit() {
     contact_form = $(".contact-form");
 
     submit_button.click(function () {
-            location.reload();
+            window.location.replace("/");
         }
     );
 }
