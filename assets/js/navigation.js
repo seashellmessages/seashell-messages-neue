@@ -27,12 +27,12 @@ function changeLogoOnMobile() {
     }
 }
 
-function resetFormOnSubmit() {
+function reloadOnSubmit() {
     submit_button = $(".submit-button");
     contact_form = $(".contact-form");
 
     submit_button.click(function () {
-            contact_form[0].reset();
+            location.reload();
         }
     );
 }
@@ -50,13 +50,19 @@ function openMenuMobile() {
             }
         }
     );
-    resetFormOnSubmit();
+}
+
+function validateForm() {
+    contact_form = $(".contact-form");
+    contact_form.validate();
+    reloadOnSubmit();
 }
 
 $(document).ready(function(){
 
     changeLogoOnMobile();
     openMenuMobile();
+    validateForm();
 
     $( window ).scroll(function () {
         stickyHeader();
@@ -65,5 +71,4 @@ $(document).ready(function(){
     $(window).resize(function () {
         changeLogoOnMobile();
     });
-
 });
