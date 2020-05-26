@@ -229,7 +229,18 @@ nav {
   padding: 2.5vh;
   p {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
+  }
+  ul {
+    li {
+      list-style: circle;
+      p {
+        font-size: 1.2em;
+      }
+      ::marker {
+        font-size: 1.2em;
+      }
+    }
   }
 }
 
