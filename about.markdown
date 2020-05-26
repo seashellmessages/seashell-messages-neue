@@ -1,5 +1,6 @@
 ---
 title: About
+position: 2
 layout: page
 order: 2
 ---

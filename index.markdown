@@ -1,5 +1,6 @@
 ---
 title: Home
+position: 3
 order: 1
 layout: home
 ---

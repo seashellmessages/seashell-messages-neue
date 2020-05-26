@@ -1,5 +1,6 @@
 ---
 title: Expertise
+position: 0
 layout: page
 order: 3
 ---
