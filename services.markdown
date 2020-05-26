@@ -1,6 +1,5 @@
 ---
 title: Services
-published: false
 position: 4
 order: 4
 layout: page
