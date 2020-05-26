@@ -93,6 +93,18 @@ body {
   background-color: rgba(152, 198, 205, 0.1);
 }
 
+h1 {
+  padding: 1em 0;
+}
+
+h2 {
+  padding: 1em 0;
+}
+
+h3 {
+  padding: 1em 0;
+}
+
 .mobile-nav-button {
   z-index: 1000;
   display: none;
@@ -104,7 +116,7 @@ body {
   padding: 1.5em;
   cursor: pointer;
   i {
-    font-size: 2em;
+    font-size: 2rem;
   }
 }
 
@@ -198,7 +210,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 12em;
+  padding: 12em 0;
   min-height: 100vh;
   img {
     width: 100%;
@@ -207,10 +219,6 @@ nav {
 
 
 .home-section {
-}
-
-#welcome-text {
-  font-size: 3em;
 }
 
 .about-section {
@@ -226,19 +234,19 @@ nav {
 
 .about-text-container {
   @include fadeInAnimation();
-  padding: 2.5vh;
+  padding: 2.5em;
   p {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2.5rem;
   }
   ul {
     li {
-      list-style: circle;
+      list-style: none;
       p {
-        font-size: 1.2em;
-      }
-      ::marker {
-        font-size: 1.2em;
+        &::before {
+          content: "- ";
+        }
+        font-size: 2.2rem;
       }
     }
   }
@@ -287,6 +295,15 @@ footer {
   }
 }
 
+.splash-image-container {
+  text-align: center;
+}
+
+.splash-image {
+  width: 30%!important;
+  margin: 2em;
+}
+
 .splash-text-container {
   @include fadeInAnimation();
   text-align: center;
@@ -294,6 +311,7 @@ footer {
 
 .contact-form-wrapper {
   @include fadeInAnimation();
+  padding: 10em 0;
 }
 
 .form-content-wrapper {
@@ -369,7 +387,7 @@ select {
 
   .about-text-container {
     p {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
   }
 }
