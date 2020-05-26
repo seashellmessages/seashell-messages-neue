@@ -195,6 +195,9 @@ nav {
   justify-content: center;
   padding-top: 12em;
   min-height: 100vh;
+  img {
+    width: 100%;
+  }
 }
 
 
@@ -209,7 +212,10 @@ nav {
 }
 
 .about-content-container {
-   width: 100%;
+  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 
 .about-text-container {
@@ -294,12 +300,6 @@ textarea {
 
 select {
   width: 100%;
-}
-
-.content-wrapper {
-  img {
-    width: 100%;
-  }
 }
 
 /*--------------------------------------------------------------
