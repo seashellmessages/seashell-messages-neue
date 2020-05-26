@@ -8,7 +8,10 @@ layout: page
 We help you hone in on your ideas and even find new conceptual perspectives on your work.
 
 We can improve your writing, your science, and you.
-![u1timover-background-2.png](/uploads/u1timover-background-2.png)\* Funding for research is very competitive, and often deserving projects miss out.😟 Applying for a grant is hard work.🧐
+
+![u1timover-background-2.png](/uploads/u1timover-background-2.png)
+
+\* Funding for research is very competitive, and often deserving projects miss out.😟 Applying for a grant is hard work.🧐
 
 * Don't waste your time. Let Seashell Messages review your application before you submit it.😏
 

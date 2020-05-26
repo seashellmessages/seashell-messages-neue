@@ -162,6 +162,7 @@ nav {
       color: $black;
       text-decoration: none;
       padding: 2vw;
+      @include transition(0.5s);
     }
     a:hover{
       color: $blue_gray;
@@ -184,6 +185,10 @@ nav {
     max-height: 100%;
     padding: 1em;
     object-fit: contain;
+    @include transition(0.5s);
+    &:hover{
+      opacity: 0.6;
+    }
   }
 }
 
@@ -214,7 +219,8 @@ nav {
 .about-content-container {
   width: 100%;
   img {
-    width: 100%;
+    width: 50%;
+    margin: 1em auto;
   }
 }
 
@@ -263,6 +269,7 @@ footer {
 .social-box {
   i {
     color: white;
+    @include transition(0.5s);
     &:hover {
       color: $blue_gray;
     }
