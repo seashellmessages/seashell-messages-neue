@@ -1,6 +1,6 @@
 ---
 title: Our Team
 date: 2020-05-26 20:52:00 +02:00
-Order 6: 
+order: 6
 ---
 
