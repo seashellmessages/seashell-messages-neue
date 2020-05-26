@@ -2,9 +2,6 @@
 title: Seashell Messages
 timezone: Europe/Berlin
 collections:
-  our-team:
-    title: Our team
-    output: true
   posts:
     title: Posts
     output: true
