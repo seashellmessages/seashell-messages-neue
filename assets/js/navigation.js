@@ -16,8 +16,12 @@ function stickyHeader() {
 
 }
 
+function isMobile() {
+    return $(window).width() <= 1024;
+}
+
 function changeLogoOnMobile() {
-    if ($(window).width() <= 1000)
+    if (isMobile())
     {
         $("#seashell-logo").attr("src", "/images/Seashell_logo_claim_rasterised_no_edge_no_text.png")
     }
@@ -72,7 +76,9 @@ $(document).ready(function(){
     validateForm();
 
     $( window ).scroll(function () {
-        stickyHeader();
+        if (!isMobile()) {
+            stickyHeader();
+        }
     });
 
     $(window).resize(function () {
