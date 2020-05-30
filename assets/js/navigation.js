@@ -32,7 +32,7 @@ function reloadOnSubmit() {
     contact_form = $(".contact-form");
 
     submit_button.click(function () {
-            window.location.replace("/");
+            contact_form.trigger("reset");
         }
     );
 }
@@ -62,7 +62,7 @@ function validateForm() {
             Dropdown: { valueNotEquals: "-Select-" }
         }
     });
-    reloadOnSubmit();
+    reloadOnSubmit()
 }
 
 $(document).ready(function(){
