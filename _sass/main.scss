@@ -227,7 +227,7 @@ nav {
 .about-content-container {
   width: 100%;
   img {
-    width: 50%;
+    width: 100%;
     margin: 1em auto;
   }
 }
@@ -236,7 +236,7 @@ nav {
   @include fadeInAnimation();
   padding: 2.5em;
   p {
-    text-align: center;
+    text-align: left;
     font-size: 2.5rem;
   }
   ul {
