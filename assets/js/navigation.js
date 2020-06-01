@@ -56,24 +56,10 @@ function openMenuMobile() {
     );
 }
 
-function validateForm() {
-    $.validator.addMethod("valueNotEquals", function(value, element, arg){
-        return arg !== value;
-    }, "Please select a service.");
-    contact_form = $(".contact-form");
-    contact_form.validate({
-        rules: {
-            Dropdown: { valueNotEquals: "-Select-" }
-        }
-    });
-    reloadOnSubmit()
-}
-
 $(document).ready(function(){
 
     changeLogoOnMobile();
     openMenuMobile();
-    validateForm();
 
     $( window ).scroll(function () {
         if (!isMobile()) {
